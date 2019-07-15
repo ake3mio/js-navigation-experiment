@@ -1,0 +1,22 @@
+{
+  "name": "@mands/pattern-library-navigation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.3"
+  },
+  "dependencies": {
+    "accordion": "^3.0.2"
+  }
+}

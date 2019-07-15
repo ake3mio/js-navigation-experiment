@@ -1,0 +1,17 @@
+$header-height: 72px;
+
+
+.header {
+  width: 100%;
+  min-height: $header-height;
+  transition: transform 250ms ease-out;
+  box-shadow: 0 3px 2px #ccc;
+  padding: 16px 8px;
+  background: #fff;
+
+  &--hidden {
+    transform: translate3d(0, -110%, 0);
+  }
+}
+
+

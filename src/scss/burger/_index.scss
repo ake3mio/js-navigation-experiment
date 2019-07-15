@@ -1,0 +1,61 @@
+$dimensions: 40px;
+$padding: 8px;
+
+@mixin line {
+  position: relative;
+  display: block;
+  background: #000;
+  height: 2px;
+  width: $dimensions - ($padding * 2);
+  max-width: 100%;
+  opacity: 1;
+  transition: all 250ms ease-out 100ms;
+}
+
+.burger {
+  position: relative;
+  width: $dimensions;
+  height: $dimensions;
+  padding: 8px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__filling {
+    @include line;
+  }
+
+  &--active {
+
+    .burger__filling {
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        position: absolute;
+        top: 50%;
+      }
+
+      &:nth-child(1) {
+        transform: translate3d(0, -50%, 0) rotate(45deg);
+        transform-origin: center;
+      }
+
+      &:nth-child(3) {
+        transform: translate3d(0, -50%, 0) rotate(-45deg);
+        transform-origin: center;
+      }
+    }
+
+
+  }
+}
